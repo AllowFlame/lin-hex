@@ -3,12 +3,12 @@ use std::fmt;
 
 /// Convert to hex values.
 /// It is similar to into_bytes() in String. However, this trait forces creating Vec<u8>.
-pub trait ToHex {
-    fn to_hex(&self) -> Result<Vec<u8>, HexConvertingError>;
+pub trait ToHexBytes {
+    fn to_hex_bytes(&self) -> Result<Vec<u8>, HexConvertingError>;
 }
 
-impl ToHex for str {
-    fn to_hex(&self) -> Result<Vec<u8>, HexConvertingError> {
+impl ToHexBytes for str {
+    fn to_hex_bytes(&self) -> Result<Vec<u8>, HexConvertingError> {
         let hex_string_len = self.len();
         if hex_string_len % 2 != 0 {
             return Result::Err(HexConvertingError::InvalidLength);
