@@ -1,5 +1,5 @@
 [package]
-name = "lin-hex"
+name = "lin_hex"
 version = "0.1.0"
 authors = ["AllowFlame <closelogin@hanmail.net>"]
 edition = "2018"
